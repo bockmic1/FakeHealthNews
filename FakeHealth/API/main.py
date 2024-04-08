@@ -13,11 +13,12 @@ parser.add_argument("--save_dir",type=str,default="../dataset")
 args = parser.parse_known_args()[0]
 
 
-tweet_keys_file = 'C:/FakeHealthNews/FakeHealth/API/resources/tweet_keys_file.txt'
+tweet_keys_file = './resources/tweet_keys_file.txt'
+
 connector = TwythonConnector(tweet_keys_file)
 
 #%%
-engagements_path = 'C:/FakeHealthNews/FakeHealth/dataset/engagements/HealthStory.json'
+engagements_path = '../dataset/engagements/HealthStory.json'
 with open(engagements_path,"r") as f:
     engagements = json.load(f)
 
